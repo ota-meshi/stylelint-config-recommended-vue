@@ -25,7 +25,7 @@
         "stylelint-config-recommended": ">=5.0.0"
     },
     "peerDependencies": {
-        "stylelint": ">=14.0.0"
+        "stylelint": "13.13.1"
     },
     "devDependencies": {
         "@ota-meshi/eslint-plugin": "^0.10.0",
