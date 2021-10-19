@@ -5,7 +5,8 @@
     "description": "",
     "devDependencies": {
         "stylelint": "github:stylelint/stylelint#v14",
-        "stylelint-config-recommended-vue": "file:../../../../"
+        "stylelint-config-recommended-vue": "file:../../../../",
+        "stylelint-config-recommended": "github:stylelint/stylelint-config-recommended#5a51a9d0c5695f39810ef5337118e69cfd8f3139"
     },
     "engines": {
         "node": "^12 || >=14"
