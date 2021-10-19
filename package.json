@@ -10,7 +10,8 @@
     ],
     "main": "index.js",
     "files": [
-        "index.js"
+        "index.js",
+        "base.js"
     ],
     "engines": {
         "node": "^12 || >=14"
