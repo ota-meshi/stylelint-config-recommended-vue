@@ -6,12 +6,17 @@
 [![NPM downloads](https://img.shields.io/npm/dm/stylelint-config-recommended-vue.svg)](http://www.npmtrends.com/stylelint-config-recommended-vue)
 [![Build Status](https://github.com/ota-meshi/stylelint-config-recommended-vue/workflows/CI/badge.svg?branch=main)](https://github.com/ota-meshi/stylelint-config-recommended-vue/actions?query=workflow%3ACI)
 
-> The recommended shareable Vue config for Stylelint.
+> The recommended shareable Vue config for [Stylelint].
 
 This config:
 
 - extends the [`stylelint-config-recommended` shared config](https://github.com/stylelint/stylelint-config-recommended) and configures its rules for Vue
 - bundles the [`postcss-html` custom syntax](https://github.com/ota-meshi/postcss-html) and configures it
+
+> **Requirements**
+>
+> - [Stylelint] v14.0.0 and above  
+>   It cannot be used with Stylelint v13 and below.
 
 To see the rules that this config uses, please read the [config itself](/index.js).
 
@@ -64,3 +69,5 @@ For example, to add the `unit-allowed-list` rule:
 ## :lock: License
 
 See the [LICENSE](LICENSE) file for license rights and limitations (MIT).
+
+[Stylelint]: https://stylelint.io/
