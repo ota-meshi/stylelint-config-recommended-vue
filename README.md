@@ -33,12 +33,11 @@ Set your `stylelint` config to:
 
 Note: This config enables rules for only `.vue` files.
 
-If you don't want the rules to be overridden, use the `/base` config.
-(If you want to enable only the parser.)
+If you don't want the rules to be overridden (If you want to enable only the parser.), please use [stylelint-config-html](https://github.com/ota-meshi/stylelint-config-html).
 
 ```json
 {
-    "extends": "stylelint-config-recommended-vue/base"
+    "extends": "stylelint-config-html/vue"
 }
 ```
 
