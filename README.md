@@ -4,7 +4,7 @@
 [![NPM version](https://img.shields.io/npm/v/stylelint-config-recommended-vue.svg)](https://www.npmjs.com/package/stylelint-config-recommended-vue)
 [![NPM downloads](https://img.shields.io/npm/dw/stylelint-config-recommended-vue.svg)](http://www.npmtrends.com/stylelint-config-recommended-vue)
 [![NPM downloads](https://img.shields.io/npm/dm/stylelint-config-recommended-vue.svg)](http://www.npmtrends.com/stylelint-config-recommended-vue)
-[![Build Status](https://github.com/ota-meshi/stylelint-config-recommended-vue/workflows/CI/badge.svg?branch=master)](https://github.com/ota-meshi/stylelint-config-recommended-vue/actions?query=workflow%3ACI)
+[![Build Status](https://github.com/ota-meshi/stylelint-config-recommended-vue/workflows/CI/badge.svg?branch=main)](https://github.com/ota-meshi/stylelint-config-recommended-vue/actions?query=workflow%3ACI)
 
 > The recommended shareable Vue config for stylelint.
 
