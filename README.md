@@ -26,7 +26,7 @@ If you've installed `stylelint-config-recommended-vue` locally within your proje
 
 ```json
 {
-  "extends": "stylelint-config-recommended-vue"
+    "extends": "stylelint-config-recommended-vue"
 }
 ```
 
@@ -34,7 +34,7 @@ If you've globally installed `stylelint-config-recommended-vue` using the `-g` f
 
 ```json
 {
-  "extends": "/absolute/path/to/stylelint-config-recommended-vue"
+    "extends": "/absolute/path/to/stylelint-config-recommended-vue"
 }
 ```
 
@@ -42,15 +42,19 @@ If you've globally installed `stylelint-config-recommended-vue` using the `-g` f
 
 Simply add a `"rules"` key to your config, then add your overrides and additions there.
 
-For example, to turn off the `block-no-empty` rule, and add the `unit-whitelist` rule:
+For example, to add the `unit-allowed-list` rule:
 
 ```json
 {
-  "extends": "stylelint-config-recommended-vue",
-  "rules": {
-    "block-no-empty": null,
-    "unit-whitelist": ["em", "rem", "s"]
-  }
+    "extends": "stylelint-config-recommended-vue",
+    "overrides": [
+        {
+            "files": ["*.vue", "**/*.vue"],
+            "rules": {
+                "unit-allowed-list": ["em", "rem", "s"]
+            }
+        }
+    ]
 }
 ```
 
