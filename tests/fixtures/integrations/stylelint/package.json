@@ -1,0 +1,10 @@
+{
+    "name": "stylelint-config-recommended-vue-test-stylelint",
+    "private": true,
+    "version": "1.0.0",
+    "description": "",
+    "devDependencies": {
+        "stylelint": "github:stylelint/stylelint#v14",
+        "stylelint-config-recommended-vue": "file:../../../../"
+    }
+}
