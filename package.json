@@ -22,11 +22,11 @@
         "preversion": "npm test && git add ."
     },
     "dependencies": {
-        "stylelint-config-html": ">=0.0.1",
-        "stylelint-config-recommended": ">=5.0.0"
+        "stylelint-config-html": ">=0.0.2",
+        "stylelint-config-recommended": ">=6.0.0-0"
     },
     "peerDependencies": {
-        "stylelint": ">=14.0.0"
+        "stylelint": ">=14.0.0-0"
     },
     "devDependencies": {
         "@ota-meshi/eslint-plugin": "^0.10.0",
