@@ -23,7 +23,7 @@ To see the rules that this config uses, please read the [config itself](/index.j
 ## :cd: Installation
 
 ```shell
-npm install --save-dev stylelint-config-recommended-vue
+npm install --save-dev postcss-html stylelint-config-recommended-vue
 ```
 
 ## :book: Usage
