@@ -18,7 +18,7 @@ This config:
 > - [Stylelint] v14.0.0 and above  
 >   It cannot be used with Stylelint v13 and below.
 
-To see the rules that this config uses, please read the [config itself](/index.js).
+To see the rules that this config uses, please read the [config itself](/lib/index.js).
 
 ## :cd: Installation
 
