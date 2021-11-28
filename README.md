@@ -46,6 +46,33 @@ If you don't want the rules to be overridden (If you want to enable only the par
 }
 ```
 
+### With SCSS
+
+Install `stylelint-config-recommended-scss`:
+
+```shell
+npm install --save-dev stylelint-config-recommended-scss
+```
+
+Set your `stylelint` config to:
+
+```json
+{
+    "extends": "stylelint-config-recommended-vue/scss"
+}
+```
+
+When used with `stylelint-config-standard-scss`:
+
+```json
+{
+    "extends": [
+        "stylelint-config-standard-scss",
+        "stylelint-config-recommended-vue/scss"
+    ]
+}
+```
+
 ### Extending the config
 
 Simply add a `"rules"` key to your config, then add your overrides and additions there.

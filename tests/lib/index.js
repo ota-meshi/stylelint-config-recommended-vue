@@ -32,3 +32,64 @@ describe("Integration with stylelint", () => {
         }
     })
 })
+
+describe("Integration with stylelint with scss", () => {
+    let originalCwd
+
+    before(() => {
+        originalCwd = process.cwd()
+        process.chdir(
+            path.join(__dirname, "../fixtures/integrations/stylelint-scss"),
+        )
+        cp.execSync("npm i", { stdio: "inherit" })
+    })
+    after(() => {
+        process.chdir(originalCwd)
+    })
+
+    it("should lint without errors", () => {
+        cp.execSync(`${STYLELINT} src/valid.vue`, { stdio: "inherit" })
+    })
+    it("should lint with errors", () => {
+        try {
+            cp.execSync(`${STYLELINT} src/invalid.vue`, { stdio: "inherit" })
+            fail("Expect an error, but without errors")
+        } catch {
+            // Expected!s
+        }
+    })
+})
+
+describe("Integration with stylelint-config-standard-scss", () => {
+    let originalCwd
+
+    before(() => {
+        originalCwd = process.cwd()
+        process.chdir(
+            path.join(
+                __dirname,
+                "../fixtures/integrations/stylelint-config-standard-scss",
+            ),
+        )
+        cp.execSync("npm i", { stdio: "inherit" })
+    })
+    after(() => {
+        process.chdir(originalCwd)
+    })
+
+    it("should lint without errors", () => {
+        cp.execSync(`${STYLELINT} src/valid.vue --fix`, {
+            stdio: "inherit",
+        })
+    })
+    it("should lint with errors", () => {
+        try {
+            cp.execSync(`${STYLELINT} src/invalid.vue`, {
+                stdio: "inherit",
+            })
+            fail("Expect an error, but without errors")
+        } catch {
+            // Expected!s
+        }
+    })
+})

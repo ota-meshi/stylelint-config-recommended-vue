@@ -8,9 +8,10 @@
         "recommended",
         "vue"
     ],
-    "main": "index.js",
+    "main": "lib/index.js",
     "files": [
-        "index.js"
+        "lib",
+        "scss"
     ],
     "engines": {
         "node": "^12 || >=14"
