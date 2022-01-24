@@ -46,6 +46,9 @@ If you don't want the rules to be overridden (If you want to enable only the par
 }
 ```
 
+Since this package configure `customSyntax` option to allow parsing Vue files, be sure it is the **LAST** item into the `extends` array, in case more than one configuration is applied.
+Not complying to this rule may result in broken Vue files parsing, generating confusing errors like `Unknown word (CssSyntaxError)`.
+
 ### With SCSS
 
 Install `stylelint-config-recommended-scss`:
