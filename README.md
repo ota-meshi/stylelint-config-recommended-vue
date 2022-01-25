@@ -76,6 +76,8 @@ When used with `stylelint-config-standard-scss`:
 }
 ```
 
+However, some stylistic rules may not work well with Vue. We recommend that you install [stylelint-config-standard-vue](https://github.com/ota-meshi/stylelint-config-standard-vue) instead.
+
 ### Extending the config
 
 Simply add a `"rules"` key to your config, then add your overrides and additions there.
