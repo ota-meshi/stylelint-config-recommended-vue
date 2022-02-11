@@ -5,9 +5,9 @@
     "description": "",
     "devDependencies": {
         "postcss-html": "^1.0.0",
-        "stylelint": "^14.5.0",
-        "stylelint-config-recommended-vue": "file:../../../../",
-        "stylelint-config-recommended": "^7.0.0"
+        "stylelint": "14.4.0",
+        "stylelint-config-recommended": "^7.0.0",
+        "stylelint-config-recommended-vue": "file:../../../../stylelint-config-recommended-vue-1.2.0.tgz"
     },
     "engines": {
         "node": "^12 || >=14"
