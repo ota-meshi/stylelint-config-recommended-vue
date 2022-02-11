@@ -20,7 +20,8 @@
         "test": "mocha \"tests/lib/**/*.js\" --reporter dot --timeout 60000",
         "lint": "eslint .",
         "eslint-fix": "eslint . --fix",
-        "preversion": "npm test && git add ."
+        "preversion": "git add .",
+        "version": "npm run test"
     },
     "dependencies": {
         "semver": "^7.3.5",

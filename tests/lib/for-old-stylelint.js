@@ -21,12 +21,12 @@ describe("Integration with stylelint v14.3", () => {
         process.chdir(
             path.join(__dirname, "../fixtures/integrations/stylelint-v14.3"),
         )
-        cp.execSync("npm i", { stdio: "inherit" })
+        cp.execSync(`npm i ${tgzName}`, { stdio: "inherit" })
         cp.execSync(
             "npx rimraf ./node_modules/stylelint-config-recommended-vue",
             { stdio: "inherit" },
         )
-        cp.execSync(`npm i ${tgzName}`, { stdio: "inherit" })
+        cp.execSync("npm i", { stdio: "inherit" })
     })
     after(() => {
         process.chdir(originalCwd)
@@ -54,12 +54,12 @@ describe("Integration with stylelint v14.4", () => {
         process.chdir(
             path.join(__dirname, "../fixtures/integrations/stylelint-v14.4"),
         )
-        cp.execSync("npm i", { stdio: "inherit" })
+        cp.execSync(`npm i ${tgzName}`, { stdio: "inherit" })
         cp.execSync(
             "npx rimraf ./node_modules/stylelint-config-recommended-vue",
             { stdio: "inherit" },
         )
-        cp.execSync(`npm i ${tgzName}`, { stdio: "inherit" })
+        cp.execSync("npm i", { stdio: "inherit" })
     })
     after(() => {
         process.chdir(originalCwd)
