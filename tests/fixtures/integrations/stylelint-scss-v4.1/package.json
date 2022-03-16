@@ -1,0 +1,16 @@
+{
+    "name": "stylelint-config-recommended-vue-test-stylelint",
+    "private": true,
+    "version": "1.0.0",
+    "description": "",
+    "devDependencies": {
+        "postcss-html": "^1.0.0",
+        "stylelint": "^14.0.0",
+        "stylelint-scss": "4.1.0",
+        "stylelint-config-recommended-scss": "^5.0.2",
+        "stylelint-config-recommended-vue": "file:../../../../"
+    },
+    "engines": {
+        "node": "^12 || >=14"
+    }
+}
