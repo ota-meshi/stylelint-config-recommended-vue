@@ -5,6 +5,13 @@ const cp = require("child_process")
 const path = require("path")
 const fs = require("fs")
 
+cp.execSync("npm pack", { stdio: "inherit" })
+const tgzName = path.resolve(
+    `stylelint-config-recommended-vue-${
+        require("../../package.json").version
+    }.tgz`,
+)
+
 const STYLELINT = `.${path.sep}node_modules${path.sep}.bin${path.sep}stylelint`
 
 const FIXTURES_ROOT_DIR = path.join(__dirname, "../fixtures/integrations")
@@ -21,6 +28,11 @@ for (const entry of fs.readdirSync(FIXTURES_ROOT_DIR, {
         before(() => {
             originalCwd = process.cwd()
             process.chdir(fixtureDir)
+            cp.execSync(`npm i ${tgzName}`, { stdio: "inherit" })
+            cp.execSync(
+                "npx rimraf ./node_modules/stylelint-config-recommended-vue",
+                { stdio: "inherit" },
+            )
             cp.execSync("npm i", { stdio: "inherit" })
         })
         after(() => {
