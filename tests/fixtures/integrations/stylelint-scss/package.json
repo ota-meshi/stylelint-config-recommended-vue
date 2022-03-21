@@ -6,7 +6,7 @@
     "devDependencies": {
         "postcss-html": "^1.0.0",
         "stylelint": "^14.0.0",
-        "stylelint-config-recommended-scss": "^5.0.2",
+        "stylelint-config-recommended-scss": "^6.0.0",
         "stylelint-config-recommended-vue": "file:../../../../stylelint-config-recommended-vue-test.tgz"
     },
     "engines": {
