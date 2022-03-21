@@ -1,6 +1,6 @@
 {
     "name": "stylelint-config-recommended-vue",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "description": "The recommended shareable Vue config for Stylelint.",
     "keywords": [
         "stylelint",
