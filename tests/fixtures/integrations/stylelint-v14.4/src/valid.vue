@@ -1,6 +1,6 @@
 <style>
 a {
-    color: red;
+    color: v-bind(color);
 }
 
 :global(.foo),

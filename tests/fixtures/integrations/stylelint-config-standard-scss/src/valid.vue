@@ -1,6 +1,6 @@
 <style lang="scss">
 a {
-  color: red;
+  color: v-bind(color);
 }
 
 // SCSS

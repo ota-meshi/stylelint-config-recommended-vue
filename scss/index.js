@@ -8,7 +8,7 @@ module.exports = {
                 "stylelint-config-recommended-scss",
                 "stylelint-config-html",
             ],
-            rules: require("../lib/vue-specific-rules"),
+            rules: require("../lib/vue-specific-rules-for-scss"),
         },
     ],
 }
