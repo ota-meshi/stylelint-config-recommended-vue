@@ -1,6 +1,7 @@
 <style lang="scss">
 a {
     color: v-bind(color);
+    padding-right: math.div(4, 2);
 }
 
 // SCSS

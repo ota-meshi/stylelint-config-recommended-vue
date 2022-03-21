@@ -6,11 +6,16 @@ const path = require("path")
 const fs = require("fs")
 
 cp.execSync("npm pack", { stdio: "inherit" })
-const tgzName = path.resolve(
+const orgTgzName = path.resolve(
     `stylelint-config-recommended-vue-${
         require("../../package.json").version
     }.tgz`,
 )
+const tgzName = path.resolve(`stylelint-config-recommended-vue-test.tgz`)
+if (fs.existsSync(tgzName)) {
+    fs.unlinkSync(tgzName)
+}
+fs.renameSync(orgTgzName, tgzName)
 
 const STYLELINT = `.${path.sep}node_modules${path.sep}.bin${path.sep}stylelint`
 
