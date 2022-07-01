@@ -1,8 +1,8 @@
-"use strict"
+"use strict";
 
 module.exports = {
-    extends: [
-        "stylelint-config-standard-scss",
-        "stylelint-config-recommended-vue/scss",
-    ],
-}
+  extends: [
+    "stylelint-config-standard-scss",
+    "stylelint-config-recommended-vue/scss",
+  ],
+};
