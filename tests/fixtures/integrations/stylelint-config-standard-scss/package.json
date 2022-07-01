@@ -1,16 +1,16 @@
 {
-    "name": "stylelint-config-recommended-vue-test-stylelint",
-    "private": true,
-    "version": "1.0.0",
-    "description": "",
-    "devDependencies": {
-        "postcss-html": "^1.0.0",
-        "stylelint": "^14.0.0",
-        "stylelint-config-recommended-scss": "^5.0.2",
-        "stylelint-config-recommended-vue": "file:../../../../stylelint-config-recommended-vue-test.tgz",
-        "stylelint-config-standard-scss": "^3.0.0"
-    },
-    "engines": {
-        "node": "^12 || >=14"
-    }
+  "name": "stylelint-config-recommended-vue-test-stylelint",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "devDependencies": {
+    "postcss-html": "^1.0.0",
+    "stylelint": "^14.0.0",
+    "stylelint-config-recommended-scss": "^5.0.2",
+    "stylelint-config-recommended-vue": "file:../../../../stylelint-config-recommended-vue-test.tgz",
+    "stylelint-config-standard-scss": "^3.0.0"
+  },
+  "engines": {
+    "node": "^12 || >=14"
+  }
 }

@@ -1,9 +1,3 @@
 {
-    "eslint.validate": [
-        "javascript",
-        "javascriptreact",
-        "json",
-        "jsonc",
-        "yaml"
-    ]
+  "eslint.validate": ["javascript", "javascriptreact", "json", "jsonc", "yaml"]
 }
