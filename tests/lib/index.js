@@ -4,6 +4,7 @@ const { fail } = require("assert");
 const cp = require("child_process");
 const path = require("path");
 const fs = require("fs");
+const semver = require("semver");
 
 cp.execSync("npm pack", { stdio: "inherit" });
 const orgTgzName = path.resolve(
@@ -27,6 +28,16 @@ for (const entry of fs.readdirSync(FIXTURES_ROOT_DIR, {
     continue;
   }
   const fixtureDir = path.join(FIXTURES_ROOT_DIR, entry.name);
+  const pkg = JSON.parse(
+    fs.readFileSync(path.join(fixtureDir, "package.json"), "utf8")
+  );
+
+  if (pkg.engines && pkg.engines.node) {
+    if (!semver.satisfies(process.version, pkg.engines.node)) {
+      continue;
+    }
+  }
+
   describe(`Integration for ${entry.name}`, () => {
     let originalCwd;
 
