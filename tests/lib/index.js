@@ -28,11 +28,13 @@ for (const entry of fs.readdirSync(FIXTURES_ROOT_DIR, {
     continue;
   }
   const fixtureDir = path.join(FIXTURES_ROOT_DIR, entry.name);
-  const pkg = JSON.parse(fs.readFileSync(path.join(fixtureDir, 'package.json'), 'utf8'))
+  const pkg = JSON.parse(
+    fs.readFileSync(path.join(fixtureDir, "package.json"), "utf8")
+  );
 
   if (pkg.engines && pkg.engines.node) {
-    if(!semver.satisfies(process.version, pkg.engines.node)) {
-      continue
+    if (!semver.satisfies(process.version, pkg.engines.node)) {
+      continue;
     }
   }
 
