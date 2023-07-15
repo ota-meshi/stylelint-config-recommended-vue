@@ -32,13 +32,13 @@
     "postcss-html": "^1.0.0"
   },
   "devDependencies": {
-    "@ota-meshi/eslint-plugin": "^0.13.0",
+    "@ota-meshi/eslint-plugin": "^0.15.0",
     "eslint": "^8.0.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-eslint-comments": "^3.2.0",
     "eslint-plugin-json-schema-validator": "^4.0.0",
     "eslint-plugin-jsonc": "^2.0.0",
-    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-n": "^15.1.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-regexp": "^1.5.0",
     "eslint-plugin-vue": "^9.0.0",
