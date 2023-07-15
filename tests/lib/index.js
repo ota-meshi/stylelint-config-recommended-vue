@@ -10,7 +10,7 @@ cp.execSync("npm pack", { stdio: "inherit" });
 const orgTgzName = path.resolve(
   `stylelint-config-recommended-vue-${
     require("../../package.json").version
-  }.tgz`
+  }.tgz`,
 );
 const tgzName = path.resolve(`stylelint-config-recommended-vue-test.tgz`);
 if (fs.existsSync(tgzName)) {
@@ -29,7 +29,7 @@ for (const entry of fs.readdirSync(FIXTURES_ROOT_DIR, {
   }
   const fixtureDir = path.join(FIXTURES_ROOT_DIR, entry.name);
   const pkg = JSON.parse(
-    fs.readFileSync(path.join(fixtureDir, "package.json"), "utf8")
+    fs.readFileSync(path.join(fixtureDir, "package.json"), "utf8"),
   );
 
   if (pkg.engines && pkg.engines.node) {
@@ -47,7 +47,7 @@ for (const entry of fs.readdirSync(FIXTURES_ROOT_DIR, {
       cp.execSync(`npm i ${tgzName}`, { stdio: "inherit" });
       cp.execSync(
         "npx rimraf ./node_modules/stylelint-config-recommended-vue",
-        { stdio: "inherit" }
+        { stdio: "inherit" },
       );
       cp.execSync("npm i", { stdio: "inherit" });
     });
