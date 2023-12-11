@@ -12,17 +12,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with:
-          node-version: 16
       - name: Install Packages
-        run: npm i --legacy-peer-deps
+        run: npm i -f
       - name: Lint
         run: npm run lint
   test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x]
+        node-version: [12.x, 14.x, 16.x, 18.x]
     steps:
       - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
@@ -30,7 +28,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install Packages
-        run: npm i --legacy-peer-deps
+        run: npm i -f
       - name: Test
         run: npm test
   test-old-vers:
@@ -42,10 +40,9 @@ jobs:
           node-version: 14.x
       - name: Downgrade Packages
         run: |
-          npm install --save-exact stylelint@14.0.0 --legacy-peer-deps
-          npm install --save-exact stylelint-config-recommended@6.0.0 --legacy-peer-deps
+          npm install --save-exact stylelint@14.0.0 stylelint-config-recommended@6.0.0 -f
           npx rimraf node_modules
       - name: Install Packages
-        run: npm i --legacy-peer-deps
+        run: npm i -f
       - name: Test
         run: npm test
