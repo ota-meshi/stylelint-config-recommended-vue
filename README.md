@@ -51,10 +51,10 @@ Not complying to this rule may result in broken Vue files parsing, generating co
 
 ### With SCSS
 
-Install `stylelint-config-recommended-scss`:
+Install `postcss-scss` and `stylelint-config-recommended-scss`:
 
 ```shell
-npm install --save-dev stylelint-config-recommended-scss
+npm install --save-dev postcss-scss stylelint-config-recommended-scss
 ```
 
 Set your `stylelint` config to:
