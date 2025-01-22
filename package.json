@@ -61,5 +61,8 @@
   "bugs": {
     "url": "https://github.com/ota-meshi/stylelint-config-recommended-vue/issues"
   },
-  "homepage": "https://github.com/ota-meshi/stylelint-config-recommended-vue#readme"
+  "homepage": "https://github.com/ota-meshi/stylelint-config-recommended-vue#readme",
+  "publishConfig": {
+    "access": "public"
+  }
 }
