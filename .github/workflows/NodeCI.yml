@@ -41,7 +41,7 @@ jobs:
       - name: Downgrade Packages
         run: |
           npm install --save-exact stylelint@14.0.0 stylelint-config-recommended@6.0.0 -f
-          npx rimraf node_modules
+          npx -y rimraf node_modules
       - name: Install Packages
         run: npm i -f
       - name: Test

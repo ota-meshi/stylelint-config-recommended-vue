@@ -46,7 +46,7 @@ for (const entry of fs.readdirSync(FIXTURES_ROOT_DIR, {
       process.chdir(fixtureDir);
       cp.execSync(`npm i ${tgzName}`, { stdio: "inherit" });
       cp.execSync(
-        "npx rimraf ./node_modules/stylelint-config-recommended-vue",
+        "npx -y rimraf ./node_modules/stylelint-config-recommended-vue",
         { stdio: "inherit" },
       );
       cp.execSync("npm i", { stdio: "inherit" });
