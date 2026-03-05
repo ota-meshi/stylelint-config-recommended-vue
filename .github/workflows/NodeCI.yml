@@ -37,7 +37,7 @@ jobs:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
         with:
-          node-version: 14.x
+          node-version: 24.x
       - name: Downgrade Packages
         run: |
           npm install --save-exact stylelint@14.0.0 stylelint-config-recommended@6.0.0 -f
