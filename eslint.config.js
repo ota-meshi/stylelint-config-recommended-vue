@@ -1,27 +1,17 @@
-import otaMeshi from "@ota-meshi/eslint-plugin";
+import { defineConfig } from "eslint/config";
+import myPlugin from "@ota-meshi/eslint-plugin";
 
-export default [
+export default defineConfig([
   {
-    ignores: [
-      ".nyc_output/**",
-      "coverage/**",
-      "node_modules/**",
-      "!.vscode/**",
-      "!.github/**",
+    extends: [
+      myPlugin.config({
+        node: true,
+        json: true,
+        packageJson: true,
+        yaml: true,
+        prettier: true,
+      }),
     ],
-  },
-  ...otaMeshi.config({
-    node: true,
-    json: true,
-    yaml: true,
-    prettier: true,
-    ts: false,
-  }),
-  {
-    languageOptions: {
-      sourceType: "module",
-      ecmaVersion: "latest",
-    },
   },
   {
     // CommonJS files, including the fixtures that emulate CommonJS consumers.
@@ -29,11 +19,13 @@ export default [
     languageOptions: {
       sourceType: "commonjs",
       globals: {
-        __dirname: "readonly",
         exports: "writable",
         module: "readonly",
         require: "readonly",
       },
     },
   },
-];
+  {
+    ignores: [".nyc_output/", "coverage/"],
+  },
+]);
