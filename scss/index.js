@@ -1,11 +1,14 @@
-"use strict";
+import vueSpecificRulesForScss from "../lib/vue-specific-rules-for-scss.js";
 
-module.exports = {
+const config = {
   overrides: [
     {
       files: ["*.vue", "**/*.vue"],
       extends: ["stylelint-config-recommended-scss", "stylelint-config-html"],
-      rules: require("../lib/vue-specific-rules-for-scss"),
+      rules: vueSpecificRulesForScss,
     },
   ],
 };
+
+export default config;
+export { config as "module.exports" };

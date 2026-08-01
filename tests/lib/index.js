@@ -1,10 +1,12 @@
-"use strict";
+import { fail } from "node:assert";
+import cp from "node:child_process";
+import fs from "node:fs";
+import { createRequire } from "node:module";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+import semver from "semver";
 
-const { fail } = require("assert");
-const cp = require("child_process");
-const path = require("path");
-const fs = require("fs");
-const semver = require("semver");
+const require = createRequire(import.meta.url);
 
 cp.execSync("npm pack", { stdio: "inherit" });
 const orgTgzName = path.resolve(
@@ -20,7 +22,9 @@ fs.renameSync(orgTgzName, tgzName);
 
 const STYLELINT = `.${path.sep}node_modules${path.sep}.bin${path.sep}stylelint`;
 
-const FIXTURES_ROOT_DIR = path.join(__dirname, "../fixtures/integrations");
+const FIXTURES_ROOT_DIR = fileURLToPath(
+  new URL("../fixtures/integrations", import.meta.url),
+);
 for (const entry of fs.readdirSync(FIXTURES_ROOT_DIR, {
   withFileTypes: true,
 })) {
