@@ -4,13 +4,13 @@
   "version": "1.0.0",
   "description": "",
   "devDependencies": {
-    "postcss-html": "^1.0.0",
+    "postcss-html": "^2.0.0",
     "stylelint": "^16.0.0",
-    "stylelint-config-html": "^1.0.0",
+    "stylelint-config-html": "^2.0.0",
     "stylelint-config-recommended": "^15.0.0",
     "stylelint-config-recommended-vue": "file:../../../../stylelint-config-recommended-vue-test.tgz"
   },
   "engines": {
-    "node": ">=18.12.0"
+    "node": "^22.12 || >=24"
   }
 }

@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: lts/*
       - name: Install Packages
-        run: npm i -f
+        run: npm i
       - name: Lint
         run: npm run lint
   test:
@@ -30,6 +30,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install Packages
-        run: npm i -f
+        run: npm i
       - name: Test
         run: npm test

@@ -15,8 +15,8 @@ This config:
 
 > **Requirements**
 >
-> - [Stylelint] v14.0.0 and above  
->   It cannot be used with Stylelint v13 and below.
+> - [Stylelint] v16.0.0 and above
+> - [postcss-html](https://github.com/ota-meshi/postcss-html) v2.0.0 and above
 > - Node.js `^22.12 || >=24`
 
 To see the rules that this config uses, please read the [config itself](/lib/index.js).
