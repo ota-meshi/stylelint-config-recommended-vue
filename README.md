@@ -11,7 +11,7 @@
 This config:
 
 - extends the [`stylelint-config-recommended` shared config](https://github.com/stylelint/stylelint-config-recommended) and configures its rules for Vue
-- bundles the [`postcss-html` custom syntax](https://github.com/ota-meshi/postcss-html) and configures it
+- configures the [`postcss-html` custom syntax](https://github.com/ota-meshi/postcss-html) via [`stylelint-config-html`](https://github.com/ota-meshi/stylelint-config-html)
 
 > **Requirements**
 >
