@@ -20,9 +20,8 @@
     "test": "mocha \"tests/lib/**/*.js\" --reporter dot --timeout 60000",
     "lint": "eslint .",
     "eslint-fix": "eslint . --fix",
-    "version": "npm run test && git add .",
-    "version:ci": "changeset version",
-    "release": "changeset publish"
+    "changeset:version": "changeset version",
+    "changeset:publish": "changeset publish"
   },
   "dependencies": {
     "semver": "^7.3.5",
