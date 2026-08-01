@@ -17,6 +17,7 @@ This config:
 >
 > - [Stylelint] v14.0.0 and above  
 >   It cannot be used with Stylelint v13 and below.
+> - Node.js `^22.12 || >=24`
 
 To see the rules that this config uses, please read the [config itself](/lib/index.js).
 

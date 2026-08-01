@@ -12,6 +12,8 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
       - name: Install Packages
         run: npm i -f
       - name: Lint
@@ -20,28 +22,13 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node-version: [12.x, 14.x, 16.x, 18.x]
+        node-version: [22.x, 24.x]
     steps:
       - uses: actions/checkout@v6
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v6
         with:
           node-version: ${{ matrix.node-version }}
-      - name: Install Packages
-        run: npm i -f
-      - name: Test
-        run: npm test
-  test-old-vers:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v6
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 14.x
-      - name: Downgrade Packages
-        run: |
-          npm install --save-exact stylelint@14.0.0 stylelint-config-recommended@6.0.0 -f
-          npx rimraf node_modules
       - name: Install Packages
         run: npm i -f
       - name: Test

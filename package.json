@@ -14,7 +14,7 @@
     "scss"
   ],
   "engines": {
-    "node": "^12 || >=14"
+    "node": "^22.12 || >=24"
   },
   "scripts": {
     "test": "mocha \"tests/lib/**/*.js\" --reporter dot --timeout 60000",
