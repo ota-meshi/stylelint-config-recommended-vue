@@ -49,7 +49,9 @@ for (const entry of fs.readdirSync(FIXTURES_ROOT_DIR, {
       // does not match the fixture's pinned version, because old npm (v6)
       // demotes the mismatched copy under stylelint-config-recommended-vue
       // instead of removing it.
-      cp.execSync("npx -y rimraf ./node_modules", { stdio: "inherit" });
+      if (fs.existsSync("./node_modules")) {
+        cp.execSync("npx -y rimraf ./node_modules", { stdio: "inherit" });
+      }
       cp.execSync("npm i", { stdio: "inherit" });
     });
     after(() => {
