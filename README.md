@@ -27,6 +27,8 @@ To see the rules that this config uses, please read the [config itself](/lib/ind
 npm install --save-dev postcss-html stylelint-config-html stylelint-config-recommended stylelint-config-recommended-vue
 ```
 
+The shared configs that this config extends (`stylelint-config-html` and `stylelint-config-recommended`) are peer dependencies, so you can control their versions from your own `package.json`.
+
 ## :book: Usage
 
 Set your `stylelint` config to:
