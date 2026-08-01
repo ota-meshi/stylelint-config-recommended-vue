@@ -1,8 +1,6 @@
-"use strict";
+import otaMeshi from "@ota-meshi/eslint-plugin";
 
-const otaMeshi = require("@ota-meshi/eslint-plugin");
-
-module.exports = [
+export default [
   {
     ignores: [
       ".nyc_output/**",
@@ -21,8 +19,21 @@ module.exports = [
   }),
   {
     languageOptions: {
+      sourceType: "module",
+      ecmaVersion: "latest",
+    },
+  },
+  {
+    // CommonJS files, including the fixtures that emulate CommonJS consumers.
+    files: ["**/*.cjs", "tests/fixtures/**/*.js"],
+    languageOptions: {
       sourceType: "commonjs",
-      ecmaVersion: 2020,
+      globals: {
+        __dirname: "readonly",
+        exports: "writable",
+        module: "readonly",
+        require: "readonly",
+      },
     },
   },
 ];

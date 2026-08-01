@@ -8,7 +8,15 @@
     "recommended",
     "vue"
   ],
+  "type": "module",
   "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./lib/index.js": "./lib/index.js",
+    "./scss": "./scss/index.js",
+    "./scss/index.js": "./scss/index.js",
+    "./package.json": "./package.json"
+  },
   "files": [
     "lib",
     "scss"
