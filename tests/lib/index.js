@@ -44,11 +44,12 @@ for (const entry of fs.readdirSync(FIXTURES_ROOT_DIR, {
     before(() => {
       originalCwd = process.cwd();
       process.chdir(fixtureDir);
-      cp.execSync(`npm i ${tgzName}`, { stdio: "inherit" });
-      cp.execSync(
-        "npx -y rimraf ./node_modules/stylelint-config-recommended-vue",
-        { stdio: "inherit" },
-      );
+      // Install from an empty node_modules in a single `npm i` run.
+      // A stepwise install can leave a hoisted stylelint-config-html that
+      // does not match the fixture's pinned version, because old npm (v6)
+      // demotes the mismatched copy under stylelint-config-recommended-vue
+      // instead of removing it.
+      cp.execSync("npx -y rimraf ./node_modules", { stdio: "inherit" });
       cp.execSync("npm i", { stdio: "inherit" });
     });
     after(() => {
