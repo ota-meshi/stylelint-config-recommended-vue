@@ -24,8 +24,10 @@ To see the rules that this config uses, please read the [config itself](/lib/ind
 ## :cd: Installation
 
 ```shell
-npm install --save-dev postcss-html stylelint-config-recommended-vue
+npm install --save-dev postcss-html stylelint-config-html stylelint-config-recommended stylelint-config-recommended-vue
 ```
+
+`stylelint-config-html` and `stylelint-config-recommended` are peer dependencies. npm v7+ installs peer dependencies automatically, but with other package managers you may need to install them yourself.
 
 ## :book: Usage
 

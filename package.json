@@ -24,13 +24,19 @@
     "changeset:publish": "changeset publish"
   },
   "dependencies": {
-    "semver": "^7.3.5",
-    "stylelint-config-html": ">=2.0.0",
-    "stylelint-config-recommended": ">=6.0.0"
+    "semver": "^7.3.5"
   },
   "peerDependencies": {
     "postcss-html": "^2.0.0",
-    "stylelint": ">=16.0.0"
+    "stylelint": ">=16.0.0",
+    "stylelint-config-html": ">=2.0.0",
+    "stylelint-config-recommended": ">=14.0.0",
+    "stylelint-config-recommended-scss": ">=14.0.0"
+  },
+  "peerDependenciesMeta": {
+    "stylelint-config-recommended-scss": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.7.0",
