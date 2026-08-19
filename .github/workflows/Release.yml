@@ -33,7 +33,7 @@ jobs:
         run: npm i
       - name: Create Release Pull Request or Publish to npm
         id: changesets
-        uses: changesets/action@v2.1.0
+        uses: changesets/action@v2.1.1
         with:
           version-script: npm run changeset:version
           publish-script: npm run changeset:publish
