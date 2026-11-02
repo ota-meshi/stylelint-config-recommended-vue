@@ -50,7 +50,7 @@
     "@changesets/changelog-github": "^1.0.0",
     "@changesets/cli": "^3.0.0",
     "@eslint-community/eslint-plugin-eslint-comments": "^4.3.0",
-    "@ota-meshi/eslint-plugin": "^0.20.0",
+    "@ota-meshi/eslint-plugin": "^0.21.0",
     "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-jsdoc": "^65.0.0",
