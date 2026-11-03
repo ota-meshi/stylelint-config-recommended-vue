@@ -64,7 +64,7 @@
     "eslint-plugin-yml": "^3.0.0",
     "mocha": "^12.0.0",
     "prettier": "^3.0.0",
-    "stylelint": "^17.0.0"
+    "stylelint": "^18.0.0"
   },
   "repository": {
     "type": "git",
